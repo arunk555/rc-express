@@ -1,3 +1,3 @@
-const { PORT, NODE_ENV } = process.env;
+const { PORT, NODE_ENV, MONGODB_URL } = process.env;
 
-module.exports = { PORT, NODE_ENV };
+module.exports = { PORT, NODE_ENV, MONGODB_URL };
