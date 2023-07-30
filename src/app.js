@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const errorhandler = require('./middlewares/errorhandler');
 const app = express();
 
 app.use(express.json());
@@ -22,5 +23,7 @@ app.get('*', (_, res) => {
         message: 'Requested Url not found'
     });
 });
+/* This error handling middleware should be defined last */
+app.use(errorhandler);
 
 module.exports = app;
