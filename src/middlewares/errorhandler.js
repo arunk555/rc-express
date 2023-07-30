@@ -12,7 +12,7 @@ const errorhandler = (error, req, res, next)=>{
     res.status(stcode).json({
         success: false,
         message: msg,
-        stack: (NODE_ENV === "development") ? stack : {}
+        // stack: (NODE_ENV === "development") ? stack : {}
     });
 }
 
