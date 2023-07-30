@@ -1,5 +1,5 @@
 const app = require('./app');
-const { PORT } = require('./config/config');
+const { PORT } = require('./config');
 
 const API_PORT = PORT || 4000;
 
