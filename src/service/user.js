@@ -1,13 +1,13 @@
-const { User } = require("../models/user");
+const { User } = require('../models/user');
 
-export function createUser(user){
-   return User.create(user);
+exports.createUser = function (user) {
+    return User.create(user);
 }
 
-export function findUserById(id){
+exports.findUserById = function (id) {
     return User.findById(id);
 }
 
-export function findUserByEmail(email){
+exports.findUserByEmail = function (email) {
     return User.findOne({ email });
 }

@@ -13,7 +13,7 @@ app.use(
 );
 
 app.use(morgan_middleware);
-app.use(router)
+app.use(router);
 
 app.get('/health', (_, res) => {
     res.status(200).json({
