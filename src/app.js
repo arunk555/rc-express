@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express = require('express');
-const errorhandler = require('./middlewares/errorhandler');
 const morgan_middleware = require('./middlewares/morgan');
 const router = require('./routes');
+const errorhandler = require('./middlewares/errorhandler');
 const app = express();
 
 app.use(express.json());
@@ -29,6 +29,6 @@ app.get('*', (_, res) => {
     });
 });
 /* This error handling middleware should be defined last */
-app.use(errorhandler);
+app.use(errorhandler)
 
 module.exports = app;

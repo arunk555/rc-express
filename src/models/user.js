@@ -1,7 +1,7 @@
 const { Schema, model, SchemaTypes } = require('mongoose');
-import { nanoid } from 'nanoid'
+const { nanoid } = require('nanoid');
 
-const roleSchema = new Schema({ value: String, default: 'admin' }, { timestamps: true });
+const roleSchema = new Schema({ value: String}, { timestamps: true });
 const schema = new Schema(
     {
         name: {
