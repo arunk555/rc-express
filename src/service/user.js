@@ -1,13 +1,14 @@
-const { User } = require('../models/user');
+const UserModel = require('../models/user');
 
 exports.createUser = function (user) {
-    return User.create(user);
+    console.log(user)
+    return UserModel.create(user);
 };
 
 exports.findUserById = function (id) {
-    return User.findById(id);
+    return UserModel.findById(id);
 };
 
 exports.findUserByEmail = function (email) {
-    return User.findOne({ email });
+    return UserModel.findOne({ email });
 };
