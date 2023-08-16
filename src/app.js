@@ -16,6 +16,10 @@ app.use(morgan_middleware);
 app.use(router);
 
 app.get('/health', (_, res) => {
+    setTimeout(() => {
+        console.log('Hi callback')
+    }, 2000);
+    console.log('jI callback')
     res.status(200).json({
         success: true,
         message: 'Site up and running!'

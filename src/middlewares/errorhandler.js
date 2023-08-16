@@ -11,7 +11,7 @@ const errorhandler = (error, req, res, next) => {
 
     res.status(stcode).json({
         success: false,
-        message: msg
+        message: error.name+" "+msg
         // stack: (NODE_ENV === "development") ? stack : {}
     });
 };
